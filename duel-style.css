@@ -1,0 +1,116 @@
+body {
+  font-family: 'Papyrus', fantasy;
+  background: #1a0825;
+  color: #fcefff;
+  text-align: center;
+  padding: 20px;
+}
+
+#setupScreen, #game {
+  max-width: 600px;
+  margin: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+#avatarOptions img {
+  width: 70px;
+  margin: 10px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+#avatarOptions img.selected {
+  border-color: #00faff;
+  box-shadow: 0 0 10px #00faff;
+}
+
+#nicknameInput {
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 1em;
+  margin: 10px;
+}
+
+.topbar button {
+  padding: 10px 15px;
+  margin: 5px;
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 40px;
+  font-size: 1.2em;
+}
+
+#questionBox {
+  margin-top: 20px;
+  font-size: 1.5em;
+  background: #320c4a;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ab5de6;
+}
+
+#timer {
+  font-size: 2em;
+  margin: 10px;
+  color: #ffd700;
+}
+
+#keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  max-width: 200px;
+  margin: 20px auto;
+}
+
+#keypad button {
+  font-size: 1.3em;
+  background: #763ca8;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 0 5px #fff;
+  cursor: pointer;
+}
+
+#answerInput {
+  font-size: 1.5em;
+  text-align: center;
+  padding: 8px;
+  border-radius: 10px;
+  width: 120px;
+}
+
+#feedback {
+  margin-top: 15px;
+  font-size: 1.2em;
+  color: #ff5e78;
+}
+
+#gameOver {
+  margin-top: 30px;
+}
+
+#gameOver button {
+  margin: 10px;
+  padding: 10px 15px;
+  font-size: 1em;
+  border-radius: 8px;
+  background: #ddd;
+  cursor: pointer;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Math e Magic: Duel</title>
+  <link rel="stylesheet" href="duel-style.css" />
+</head>
+<body>
+  <!-- Setup Screen -->
+  <div id="setupScreen">
+    <h1>⚡ Math e Magic ⚔️</h1>
+    <label>Choose your Avatar:</label>
+    <div id="avatarOptions">
+      <img src="avatar1.png" onclick="selectAvatar(1)" />
+      <img src="avatar2.png" onclick="selectAvatar(2)" />
+      <img src="avatar3.png" onclick="selectAvatar(3)" />
+    </div>
+    <label>Enter your Wizard Name:</label>
+    <input id="nicknameInput" type="text" placeholder="Your magical name..." />
+    <button onclick="startGame()">Start Duel</button>
+  </div>
+
+  <!-- Game Screen -->
+  <div id="game" class="hidden">
+    <div class="topbar">
+      <button onclick="useFreeze()">🧊 Freeze</button>
+      <button onclick="useSkip()">⚡ Skip</button>
+      <button onclick="exitGame()">Exit Duel</button>
+    </div>
+
+    <div class="scoreboard">
+      <div><img id="playerAvatar" src="" /> <span id="playerName"></span><br><span id="playerScore">🧙 Mana: 0</span></div>
+      <div><span id="computerScore">🤖 CPU Mana: 0</span></div>
+    </div>
+
+    <div id="questionBox">Question appears here</div>
+    <div id="timer">10</div>
+
+    <input id="answerInput" type="text" disabled />
+    <div id="keypad"></div>
+
+    <div id="feedback" class="hidden"></div>
+
+    <div id="gameOver" class="hidden">
+      <h2>Duel Over!</h2>
+      <button onclick="restartGame()">Play Again</button>
+    </div>
+  </div>
+
+  <!-- Audio -->
+  <audio id="duelSound" src="duel.mp3" preload="auto"></audio>
+  <audio id="correctSound" src="correct.mp3" preload="auto"></audio>
+  <audio id="wrongSound" src="wrong.mp3" preload="auto"></audio>
+
+  <script src="magic-logic.js"></script>
+</body>
+</html>
